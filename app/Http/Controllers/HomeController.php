@@ -22,6 +22,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    //*paginasi dengan maksimal barang dihalaman utama adalah 20 barang
     public function index()
     {
         $barangs = barang::paginate(20);

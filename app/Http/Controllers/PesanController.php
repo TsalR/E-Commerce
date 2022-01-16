@@ -19,6 +19,7 @@ class PesanController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     //todo:authentication user harus login terlebih dulu
     public function __construct()
     {
         $this->middleware('auth');
@@ -45,6 +46,7 @@ class PesanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    //*fungsi pemesanan barang
     public function store(Request $request, $id)
     {
         $barang = barang::where('id',$id)->first();
